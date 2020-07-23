@@ -1,0 +1,32 @@
+title = "pregunta"
+url = "/pregunta/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+<link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        
+        <script src="{{ [
+        'assets/javascript/app.js' 
+        ] | theme }}" ></script>
+        <title>cuadroPreguntas</title>
+
+<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    Preguntas.id
+    verificarRespuesta();
+    {{respuesta.respuesta1}}<br>
+    {{respuesta.respuesta2}}<br>
+    {{respuesta.respuesta3}}<br>
+    {{respuesta.respuesta4}}<br>            
+{% endfor %}

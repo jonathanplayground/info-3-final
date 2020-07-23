@@ -1,0 +1,55 @@
+1595476793a:1:{s:12:"pregunta.htm";a:8:{s:8:"fileName";s:12:"pregunta.htm";s:7:"content";s:773:"title = "pregunta"
+url = "/pregunta/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+<link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        
+        <script src="{{ [
+        'assets/javascript/app.js' 
+        ] | theme }}" ></script>
+        <title>cuadroPreguntas</title>
+
+<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    Preguntas.id
+    verificarRespuesta();
+    {{respuesta.respuesta1}}<br>
+    {{respuesta.respuesta2}}<br>
+    {{respuesta.respuesta3}}<br>
+    {{respuesta.respuesta4}}<br>            
+{% endfor %}";s:5:"mtime";i:1595137634;s:6:"markup";s:510:"<link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        
+        <script src="{{ [
+        'assets/javascript/app.js' 
+        ] | theme }}" ></script>
+        <title>cuadroPreguntas</title>
+
+<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    Preguntas.id
+    verificarRespuesta();
+    {{respuesta.respuesta1}}<br>
+    {{respuesta.respuesta2}}<br>
+    {{respuesta.respuesta3}}<br>
+    {{respuesta.respuesta4}}<br>            
+{% endfor %}";s:4:"code";s:192:"use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}";s:5:"title";s:8:"pregunta";s:3:"url";s:13:"/pregunta/:id";s:9:"is_hidden";s:1:"0";}}

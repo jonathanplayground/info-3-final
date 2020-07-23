@@ -1,0 +1,120 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #E5E5E5;
+    justify-content: center;
+}
+h1{
+    color: white;
+}
+h2{
+    position: absolute;
+    font-size: 50px;
+    
+}
+/*h3{
+    position: absolute;
+    justify-content: center;
+    font-size: 37px;
+    top: 30px;
+}*/
+p{
+    color: white;
+}
+.contador{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+    background-color: #AF9164;
+    justify-content: center;
+    position: absolute;
+    top: 942px;
+    left: 1322px;
+    font-size: 25px;
+    line-height: 1px;
+}
+.contenedor{
+    display: flex;
+    flex-flow:wrap;
+    width: 1200px;
+    height:900px;
+    background-color:#F7F3E3;
+    border: 1px solid;
+    justify-content: center;
+    position: absolute;
+    left: 119px;
+    top: 89px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contenedorOpciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: 1px space-between;
+    background-color: #2B2118;
+    width:1200px;
+    height: 368px;
+    position: absolute;
+    bottom: 0px;
+}
+.cuadroCorrecto{
+    display: flex;
+    width: 563px;
+    height: 167px;
+    background-color:   #AF9164;
+    position: absolute;
+    justify-content: center;
+    top: 317px;
+}
+.cuadroPregunta{
+    display: flex;
+    width:760px;
+    height:226px;
+    background-color:#2B2118;    
+    position: absolute;
+    top: 53px;
+    border-radius: 60px;
+    line-height: 120px;
+    
+}
+.cuadroSiguiente{
+    background-color: #00FF19;
+    height: 150px;
+    width: 400px;
+    border-radius: 80px;
+    border: 0px;
+    position: absolute;
+    top: 497px;
+    text-align: center;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+}
+.desktop{    
+    display:flex;
+    flex-flow: wrap;
+    width: 1440px;
+    height: 1024px;
+    background-color: #6F1A07;
+    justify-content: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.opcion{
+    display: flex;
+    flex-flow: wrap;
+    width: 580px;
+    height: 125px;
+    background-color: #C4C4C4;
+    
+    border-radius: 30px; 
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    bottom: 5px;
+ 
+    justify-content: center;
+    line-height: normal;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>cuadroPreguntas</title>  
+    </head>
+    
+    <body>
+        <div>
+            <div class="desktop">
+                <div class="contenedor">
+                    <div class="cuadroPregunta">
+                        <h1 id="preguntas">Enunciado pregunta</h1>  
+                    </div>
+                    <div class="cuadroCorrecto">
+                        <h2 id="correcto">correcto/incorrecto</h2>
+                    </div>
+                    <div class="contenedorOpciones">
+                        <button class="opcion" id="opcion1" onclick="respuesta1()">
+                            <p  id="parrafo1">OPCION 1</p>
+                        </button>
+                        <button class="opcion" id="opcion2" onclick="respuesta2()">  
+                            <p id="parrafo2">OPCION 2</p>
+                        </button>
+                        <button class="opcion" id="opcion3" onclick="respuesta3()">  
+                            <p id="parrafo3">OPCION 3</p>  
+                        </button>
+                        <button class="opcion" id="opcion4" onclick="respuesta4()">  
+                            <p id="parrafo4">OPCION 4</p>  
+                        </button>
+                    </div>
+                    <div id="botonSiguiente">
+                        <button class = "cuadroSiguiente" onclick="contaSiguiente()">
+                        <b>Siguiente</b>
+                        </button>
+                    </div>
+                </div>
+                <div class="contador">
+                    <h3 id="conta">0</h3>
+                </div>
+            </div>
+        </div>
+        <script>
+            var siguiente = 0;
+            var pregunta = 0;
+            var respuesta = 0;
+            var contador = 0;
+
+            function contaSiguiente(){
+                siguiente = siguiente + 1;
+                pregunta = pregunta + 1;
+                cambioPregunta();
+            }
+
+            function respuesta1(){
+                respuesta = 1;
+                verificarRespuesta();
+                contaSiguiente();
+            }
+            function respuesta2(){
+                respuesta = 2;
+                verificarRespuesta();
+                contaSiguiente();
+            }
+            function respuesta3(){
+                respuesta = 3;
+                verificarRespuesta();
+                contaSiguiente();
+            }
+            function respuesta4(){
+                respuesta = 4;
+                verificarRespuesta();
+                contaSiguiente();
+            }
+            function verificarRespuesta()
+            {
+                if(pregunta==1)
+                {
+                    if(respuesta == 1)
+                        {
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else
+                        {
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                }
+                else if (pregunta==2)
+                {
+                    if(respuesta == 2)
+                        {
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else
+                        {
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                }
+                else if(pregunta ==3)
+                {
+                    if(respuesta == 2)
+                        {
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else
+                        {
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                }
+                else if(pregunta ==4)
+                {
+                    if(respuesta == 2){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                }
+                else if(pregunta ==5)
+                {
+                    if(respuesta == 4){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                }
+            }
+
+            function cambioPregunta(){
+                    if(pregunta == 1)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Cuál es el lugar más frío de la tierra?";
+                        document.getElementById("parrafo1").innerHTML = "La Antártida";
+                        document.getElementById("parrafo2").innerHTML = "Yellowknife/Canada";
+                        document.getElementById("parrafo3").innerHTML = "Greolandia";
+                        document.getElementById("parrafo4").innerHTML = "Yakutsk/Siberia";
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 2)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Cuántas esferas del dragon existen en la tierra?";
+                        document.getElementById("parrafo1").innerHTML = "5";
+                        document.getElementById("parrafo2").innerHTML = "7";
+                        document.getElementById("parrafo3").innerHTML = "9";
+                        document.getElementById("parrafo4").innerHTML = "8";
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 3)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Cuántas personas habitan Colombia?";
+                        document.getElementById("parrafo1").innerHTML = "10'000.000";
+                        document.getElementById("parrafo2").innerHTML = "49'000.000";
+                        document.getElementById("parrafo3").innerHTML = "39'000.000";
+                        document.getElementById("parrafo4").innerHTML = "28'000.000";
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 4)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿De qué colores es la bandera de México?";
+                        document.getElementById("parrafo1").innerHTML = "verde, negro y blanco";
+                        document.getElementById("parrafo2").innerHTML = "verde, blanco y rojo";
+                        document.getElementById("parrafo3").innerHTML = "verde, amarillo y rojo";
+                        document.getElementById("parrafo4").innerHTML = "verde, azul y blanco";
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 5)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Quién pintó “la última cena”?";
+                        document.getElementById("parrafo1").innerHTML = "Pablo Picaso";
+                        document.getElementById("parrafo2").innerHTML = "Salvador Dalí";
+                        document.getElementById("parrafo3").innerHTML = "Vincent van Gogh";
+                        document.getElementById("parrafo4").innerHTML = "Leonardo da Vinci";
+                        respuesta = 0;
+                    }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+1595476793a:1:{s:12:"correcto.htm";a:8:{s:8:"fileName";s:12:"correcto.htm";s:7:"content";s:440:"title = "correcto"
+url = "/correcto"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+10 puntos <br>
+
+    <div id="botonSiguiente">
+        <button class = "cuadroSiguiente" onclick = <h3> <a href = "/basedatosconcurso/">{{"Siguiente"}}</a></h3>
+        </button>";s:5:"mtime";i:1595136911;s:6:"markup";s:181:"10 puntos <br>
+
+    <div id="botonSiguiente">
+        <button class = "cuadroSiguiente" onclick = <h3> <a href = "/basedatosconcurso/">{{"Siguiente"}}</a></h3>
+        </button>";s:4:"code";s:192:"use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}";s:5:"title";s:8:"correcto";s:3:"url";s:9:"/correcto";s:9:"is_hidden";s:1:"0";}}

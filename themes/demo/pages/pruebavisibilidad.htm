@@ -1,0 +1,19 @@
+title = "pruebaVisibilidad"
+url = "/pruebavisibilidad"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Puebapluging\Models\Cursos;
+
+function onStart()
+{
+    $this['Cursos'] = Cursos::orderBy('created_at', 'desc')->get();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}
+?>
+==
+{% for curso in Cursos %}
+        <h3> <a href="/addlink/{{curso.id}}"> {{curso.nombre}}</a></h3>
+        {{ curso.codigo }} <br>        
+        
+{% endfor %}

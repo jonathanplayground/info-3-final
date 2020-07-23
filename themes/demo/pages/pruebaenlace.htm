@@ -1,0 +1,23 @@
+title = "pruebaenlace"
+url = "/pruebaenlace/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    <a href = "/correcto/">{{respuesta.respuesta1}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta2}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta3}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta4}}</a><br>
+{% endfor %}

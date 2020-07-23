@@ -1,0 +1,18 @@
+title = "addLink"
+url = "/addlink/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Puebapluging\Models\Cursos;
+function onStart()
+{
+    $this['Cursos'] = Cursos::where('id', $this->param('id'))->first();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}
+?>
+==
+<b> {{Cursos.nombre}} <br> </b>
+
+        {% for estudiante in Cursos.estudiantes %}
+        {{estudiante.nombre}} <br>
+        {% endfor %}

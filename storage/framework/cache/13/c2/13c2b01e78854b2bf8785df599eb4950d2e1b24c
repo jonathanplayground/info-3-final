@@ -1,0 +1,71 @@
+1595476793a:1:{s:16:"sistemadatos.htm";a:8:{s:8:"fileName";s:16:"sistemadatos.htm";s:7:"content";s:1294:"title = "semestres"
+url = "/semestres"
+is_hidden = 0
+==
+<?php
+//php
+use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::orderBy('created_at', 'asc')->get();
+    //$this --> indica que es una variable de la pag
+    //['Semestre1'] --> nombre de la variable
+    // =Semestres --> Modelo implementado
+    // :: orderBy(nombre) -> Metodo implementado 'orderBy' campo de referencia para el metodo (´nombre') 
+    // -> get()  -> traer datos. //-> first()  -> traer el primer dato
+    
+    //var_dump($this['Semestres1']);  // devuelve el tipo de variable y contenido.
+}
+?>
+==
+<html> 
+    <head>
+        <link href="{{ 'assets/css/pagina-principal.css'|theme }}" rel="stylesheet">
+        <title>Semestres</title>  
+    </head>
+    <body>
+    <div class = "contenedor">
+        {% for semestre in Semestres1 %}      
+                <div class = "opcion">
+                    <h3> <a href = "/cursos/{{semestre.id}}">{{ semestre.nombre }}</a></h3>   
+                </div>
+            {% endfor %}
+            <div>
+                <h3> <a href = "/pagina-principal/">{{ 'pagina principal' }}</a></h3>   
+            </div>
+    </div>
+        
+    </body>";s:5:"mtime";i:1595351068;s:6:"markup";s:596:"<html> 
+    <head>
+        <link href="{{ 'assets/css/pagina-principal.css'|theme }}" rel="stylesheet">
+        <title>Semestres</title>  
+    </head>
+    <body>
+    <div class = "contenedor">
+        {% for semestre in Semestres1 %}      
+                <div class = "opcion">
+                    <h3> <a href = "/cursos/{{semestre.id}}">{{ semestre.nombre }}</a></h3>   
+                </div>
+            {% endfor %}
+            <div>
+                <h3> <a href = "/pagina-principal/">{{ 'pagina principal' }}</a></h3>   
+            </div>
+    </div>
+        
+    </body>";s:4:"code";s:629:"//php
+use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::orderBy('created_at', 'asc')->get();
+    //$this --> indica que es una variable de la pag
+    //['Semestre1'] --> nombre de la variable
+    // =Semestres --> Modelo implementado
+    // :: orderBy(nombre) -> Metodo implementado 'orderBy' campo de referencia para el metodo (´nombre') 
+    // -> get()  -> traer datos. //-> first()  -> traer el primer dato
+    
+    //var_dump($this['Semestres1']);  // devuelve el tipo de variable y contenido.
+}";s:5:"title";s:9:"semestres";s:3:"url";s:10:"/semestres";s:9:"is_hidden";s:1:"0";}}

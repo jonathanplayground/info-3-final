@@ -1,0 +1,52 @@
+title = "concurso"
+url = "/concurso"
+is_hidden = 0
+==
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        
+        <script src="{{ [
+        'assets/javascript/app.js' 
+        ] | theme }}" ></script>
+        <title>cuadroPreguntas</title>  
+    </head>
+    
+    <body>
+        <div>
+            <div class="desktop">
+                <div class="contenedor">
+                    <div class="cuadroPregunta">
+                        <h1 id="preguntas">Enunciado pregunta</h1>  
+                    </div>
+                    <div class="cuadroCorrecto">
+                        <h2 id="correcto">correcto/incorrecto</h2>
+                    </div>
+                    <div class="contenedorOpciones">
+                        <button class="opcion" id="opcion1" onclick="respuesta1()">
+                            <p  id="parrafo1">OPCION 1</p>
+                        </button>
+                        <button class="opcion" id="opcion2" onclick="respuesta2()">  
+                            <p id="parrafo2">OPCION 2</p>
+                        </button>
+                        <button class="opcion" id="opcion3" onclick="respuesta3()">  
+                            <p id="parrafo3">OPCION 3</p>  
+                        </button>
+                        <button class="opcion" id="opcion4" onclick="respuesta4()">  
+                            <p id="parrafo4">OPCION 4</p>  
+                        </button>
+                    </div>
+                    <div id="botonSiguiente">
+                        <button class = "cuadroSiguiente" onclick="contaSiguiente()">
+                        <b>Siguiente</b>
+                        </button>
+                    </div>
+                </div>
+                <div class="contador">
+                    <h3 id="conta">0</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+title = "correcto"
+url = "/correcto"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+10 puntos <br>
+
+    <div id="botonSiguiente">
+        <button class = "cuadroSiguiente" onclick = <h3> <a href = "/basedatosconcurso/">{{"Siguiente"}}</a></h3>
+        </button>

@@ -1,0 +1,27 @@
+1595476793a:1:{s:11:"addlink.htm";a:8:{s:8:"fileName";s:11:"addlink.htm";s:7:"content";s:437:"title = "addLink"
+url = "/addlink/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Puebapluging\Models\Cursos;
+function onStart()
+{
+    $this['Cursos'] = Cursos::where('id', $this->param('id'))->first();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}
+?>
+==
+<b> {{Cursos.nombre}} <br> </b>
+
+        {% for estudiante in Cursos.estudiantes %}
+        {{estudiante.nombre}} <br>
+        {% endfor %}";s:5:"mtime";i:1594082794;s:6:"markup";s:143:"<b> {{Cursos.nombre}} <br> </b>
+
+        {% for estudiante in Cursos.estudiantes %}
+        {{estudiante.nombre}} <br>
+        {% endfor %}";s:4:"code";s:225:"use Jguerreroz\Puebapluging\Models\Cursos;
+function onStart()
+{
+    $this['Cursos'] = Cursos::where('id', $this->param('id'))->first();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}";s:5:"title";s:7:"addLink";s:3:"url";s:12:"/addlink/:id";s:9:"is_hidden";s:1:"0";}}

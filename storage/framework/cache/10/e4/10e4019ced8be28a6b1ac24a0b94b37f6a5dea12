@@ -1,0 +1,101 @@
+1595476793a:1:{s:12:"materias.htm";a:8:{s:8:"fileName";s:12:"materias.htm";s:7:"content";s:1726:"title = "cursos"
+url = "/cursos/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    $this['Cursos'] = Cursos::orderBy('id_semestre')->get();
+}
+?>
+==
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="{{ 'assets/css/cursos.css'|theme }}" rel="stylesheet">
+        <title>cursos</title>  
+    </head>
+    
+    <body>
+    <div>
+        <h1>    <b>{{Semestres1.nombre}}</b> <br> </h1>
+        <div class = "contenedor">
+            {% for curso in Semestres1.cursos %}    
+                <div class = "opcion">
+                <h1>Materia:      {{curso.nombre}}<br> </h1> 
+                    codigo:       {{curso.id_curso}}<br>
+                    creditos:     {{curso.creditos}}<br>
+                    Horas asignadas :{{curso.h_asignado}}<br>
+                    Horas de trabajo autonomo: {{curso.h_autonomo}}<br>
+                <div/>
+            {% endfor %}
+    </div>
+    
+    <div class = "contenedor">
+            {% for curso in Cursos %} 
+                <div class = "opcion">
+                    <h2>Materia:      {{curso.nombre}} <br> </h2>
+                    codigo:       {{curso.id_curso}}<br>
+                    creditos:     {{curso.creditos}}<br>
+                    Horas asignadas :{{curso.h_asignado}}<br>
+                    Horas de trabajo autonomo: {{curso.h_autonomo}}<br>
+                </div>
+            {% endfor %}
+    </div>
+    
+        
+    <div class = "boton">
+        <h3> <a href = "/semestres/">{{ 'atras' }}</a></h3>
+    </div>
+    
+    </body>";s:5:"mtime";i:1595362573;s:6:"markup";s:1385:"<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="{{ 'assets/css/cursos.css'|theme }}" rel="stylesheet">
+        <title>cursos</title>  
+    </head>
+    
+    <body>
+    <div>
+        <h1>    <b>{{Semestres1.nombre}}</b> <br> </h1>
+        <div class = "contenedor">
+            {% for curso in Semestres1.cursos %}    
+                <div class = "opcion">
+                <h1>Materia:      {{curso.nombre}}<br> </h1> 
+                    codigo:       {{curso.id_curso}}<br>
+                    creditos:     {{curso.creditos}}<br>
+                    Horas asignadas :{{curso.h_asignado}}<br>
+                    Horas de trabajo autonomo: {{curso.h_autonomo}}<br>
+                <div/>
+            {% endfor %}
+    </div>
+    
+    <div class = "contenedor">
+            {% for curso in Cursos %} 
+                <div class = "opcion">
+                    <h2>Materia:      {{curso.nombre}} <br> </h2>
+                    codigo:       {{curso.id_curso}}<br>
+                    creditos:     {{curso.creditos}}<br>
+                    Horas asignadas :{{curso.h_asignado}}<br>
+                    Horas de trabajo autonomo: {{curso.h_autonomo}}<br>
+                </div>
+            {% endfor %}
+    </div>
+    
+        
+    <div class = "boton">
+        <h3> <a href = "/semestres/">{{ 'atras' }}</a></h3>
+    </div>
+    
+    </body>";s:4:"code";s:274:"use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    $this['Cursos'] = Cursos::orderBy('id_semestre')->get();
+}";s:5:"title";s:6:"cursos";s:3:"url";s:11:"/cursos/:id";s:9:"is_hidden";s:1:"0";}}

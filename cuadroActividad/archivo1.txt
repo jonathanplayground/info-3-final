@@ -1,0 +1,9 @@
+if(siguiente == 1)
+{
+    contaPregunta = contaPregunta + 1;
+}
+
+if (contaPregunta == 1)
+{
+    document.getElementByid("pregunta") = "variable"
+}

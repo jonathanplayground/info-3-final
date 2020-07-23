@@ -1,0 +1,37 @@
+1595476793a:1:{s:16:"pruebaenlace.htm";a:8:{s:8:"fileName";s:16:"pruebaenlace.htm";s:7:"content";s:621:"title = "pruebaenlace"
+url = "/pruebaenlace/:id"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}
+?>
+==
+<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    <a href = "/correcto/">{{respuesta.respuesta1}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta2}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta3}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta4}}</a><br>
+{% endfor %}";s:5:"mtime";i:1595137893;s:6:"markup";s:350:"<b> {{Preguntas.contenido}} <br> </b>
+
+
+{% for respuesta in Preguntas.respuestas %}
+    <a href = "/correcto/">{{respuesta.respuesta1}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta2}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta3}}</a><br>
+    <a href = "/incorrecto/">{{respuesta.respuesta4}}</a><br>
+{% endfor %}";s:4:"code";s:192:"use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    $this['Preguntas'] = Preguntas::where('id', $this->param('id'))->first();
+}";s:5:"title";s:12:"pruebaenlace";s:3:"url";s:17:"/pruebaenlace/:id";s:9:"is_hidden";s:1:"0";}}

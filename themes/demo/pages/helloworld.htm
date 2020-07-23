@@ -1,0 +1,19 @@
+title = "basedatosconcurso"
+url = "/basedatosconcurso"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Concurso\Models\Preguntas;
+use Jguerreroz\Concurso\Models\Respuestas;
+
+function onStart()
+{
+    //$this['helloW'] = "hola hola hola 3!";  //ingresar algo en la pag
+    $this['Preguntas'] = Preguntas::orderBy('created_at', 'desc')->get();
+    //var_dump($this['Preguntas']);
+}
+?>
+==
+{% for pregunta in Preguntas %}
+        <h3> <a href = "/pruebaenlace/{{pregunta.id}}">{{ pregunta.contenido }}</a></h3>
+{% endfor %}

@@ -1,0 +1,85 @@
+1595476793a:1:{s:20:"pagina-principal.htm";a:8:{s:8:"fileName";s:20:"pagina-principal.htm";s:7:"content";s:1465:"title = "pagina-principal"
+url = "/pagina-principal"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    //$this['Cursos'] = Cursos::orderBy('nombre')->get();
+    //$this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    //$this['Cursos'] = Cursos::where('id',$this->param('id'))->get();
+}
+?>
+==
+<html> 
+    <head>
+        <link href="{{ 'assets/css/pagina-principal.css'|theme }}" rel="stylesheet">
+        <title>pagina-principal</title>  
+    </head>
+<div class = "desktop">
+    
+    <div class = "contenedor">
+        <h1> SISTEMA DE INFORMACION </h1> <br>
+        <h1> LICENCIATURA ELECTRONICA  </h1> <br>
+        
+        <div class = "opcion">
+            <h3> <a href = "/semestres/">{{ 'Semestres' }}</a></h3>   
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/cursos/:id/{{curso}}">{{ 'Cursos' }}</a></h3> 
+            <!--<h3> <a href = "/cursos/:id/">{{ 'Cursos' }}</a></h3>   -->
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/estudiantes/">{{ 'Estudiantes' }}</a></h3>   
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/cohortes/">{{ 'Cohortes' }}</a></h3>   
+        </div>
+        
+    </div> 
+</div>";s:5:"mtime";i:1595353056;s:6:"markup";s:958:"<html> 
+    <head>
+        <link href="{{ 'assets/css/pagina-principal.css'|theme }}" rel="stylesheet">
+        <title>pagina-principal</title>  
+    </head>
+<div class = "desktop">
+    
+    <div class = "contenedor">
+        <h1> SISTEMA DE INFORMACION </h1> <br>
+        <h1> LICENCIATURA ELECTRONICA  </h1> <br>
+        
+        <div class = "opcion">
+            <h3> <a href = "/semestres/">{{ 'Semestres' }}</a></h3>   
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/cursos/:id/{{curso}}">{{ 'Cursos' }}</a></h3> 
+            <!--<h3> <a href = "/cursos/:id/">{{ 'Cursos' }}</a></h3>   -->
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/estudiantes/">{{ 'Estudiantes' }}</a></h3>   
+        </div>
+        
+        <div class = "opcion">
+            <h3> <a href = "/cohortes/">{{ 'Cohortes' }}</a></h3>   
+        </div>
+        
+    </div> 
+</div>";s:4:"code";s:424:"use Jguerreroz\Sistemadeinformacion\Models\Cursos;
+use Jguerreroz\Sistemadeinformacion\Models\Semestres;
+
+function onStart()
+{
+    $this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    //$this['Cursos'] = Cursos::orderBy('nombre')->get();
+    //$this['Semestres1'] = Semestres::where('id',$this->param('id'))->first();
+    //$this['Cursos'] = Cursos::where('id',$this->param('id'))->get();
+}";s:5:"title";s:16:"pagina-principal";s:3:"url";s:17:"/pagina-principal";s:9:"is_hidden";s:1:"0";}}

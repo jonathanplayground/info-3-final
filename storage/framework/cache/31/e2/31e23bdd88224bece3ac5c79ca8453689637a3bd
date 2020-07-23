@@ -1,0 +1,29 @@
+1595476793a:1:{s:21:"pruebavisibilidad.htm";a:8:{s:8:"fileName";s:21:"pruebavisibilidad.htm";s:7:"content";s:471:"title = "pruebaVisibilidad"
+url = "/pruebavisibilidad"
+is_hidden = 0
+==
+<?php
+use Jguerreroz\Puebapluging\Models\Cursos;
+
+function onStart()
+{
+    $this['Cursos'] = Cursos::orderBy('created_at', 'desc')->get();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}
+?>
+==
+{% for curso in Cursos %}
+        <h3> <a href="/addlink/{{curso.id}}"> {{curso.nombre}}</a></h3>
+        {{ curso.codigo }} <br>        
+        
+{% endfor %}";s:5:"mtime";i:1594084274;s:6:"markup";s:163:"{% for curso in Cursos %}
+        <h3> <a href="/addlink/{{curso.id}}"> {{curso.nombre}}</a></h3>
+        {{ curso.codigo }} <br>        
+        
+{% endfor %}";s:4:"code";s:223:"use Jguerreroz\Puebapluging\Models\Cursos;
+
+function onStart()
+{
+    $this['Cursos'] = Cursos::orderBy('created_at', 'desc')->get();
+    //var_dump($this['Cursos']);    //visualizar tipo y contenido de las variables
+}";s:5:"title";s:17:"pruebaVisibilidad";s:3:"url";s:18:"/pruebavisibilidad";s:9:"is_hidden";s:1:"0";}}
